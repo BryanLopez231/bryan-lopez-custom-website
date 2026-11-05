@@ -7,7 +7,7 @@
 
 body {
     background-color: #120422;
-    color: #E2D9F3;
+    color: #00FFC2;
     font-family: 'Rajdhani', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -124,7 +124,7 @@ main {
 .content-panel h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.4rem;
-    color: #E2D9F3;
+    color: #00FFC2;
     text-align: center;
     letter-spacing: 1px;
 }
@@ -132,7 +132,7 @@ main {
 .content-panel .subtitle {
     text-align: center;
     font-size: 0.95rem;
-    color: #9D84B7;
+    color: #E2D9F3;
     margin-top: 5px;
     letter-spacing: 1px;
 }
@@ -140,7 +140,7 @@ main {
 .neon-divider {
     border: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #FF51CD, transparent);
+    background: linear-gradient(90deg, transparent, #56DCE0, transparent);
     margin: 15px 0 25px 0;
 }
 
@@ -218,13 +218,13 @@ main {
 /* Locations & US Directory Map */
 .directory-subhead {
     font-size: 0.85rem;
-    color: #9D84B7;
+    color: #da5fff;
     margin-bottom: 15px;
     text-align: center;
 }
 
 .inline-link {
-    color: #D4881E;
+    color: #c219ff;
     text-decoration: underline;
 }
 
@@ -286,7 +286,7 @@ main {
 }
 
 .directory-list a {
-    color: #D4881E;
+    color: #c219ff;
     text-decoration: underline;
 }
 

@@ -55,7 +55,7 @@ const stateData = {
         name: 'Alabama',
         malls: [
             { name: 'Century Plaza: Birmingham, AL', url: '#' },
-            { name: 'Eastwood Mall: Birmingham, AL ☕', url: '#' }
+            { name: 'Eastwood Mall: Birmingham, AL', url: '#' }
         ]
     },
     'CA': {
