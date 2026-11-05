@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Plaza - Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+     <header class="site-header">
+    <div class="logo-container"> 
+    <img src="LOGOEP.png" alt="Echo Plaza Logo" width="350">
+</div>
+</header>
+          
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="locations.html">LOCATIONS</a></li>
+            <li><a href="gallery.html" class="active">GALLERY</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="split-container">
+            <!-- Left Panel: 6-Photo Grid Layout -->
+            <section class="gallery-grid-panel">
+                <div class="photo-grid">
+                    <div class="grid-card" onclick="openLightbox('Atrium.jpg', 'Sunlit Atrium Skylight')">
+                        <img src="Atrium.jpg" alt="Atrium Skylight">
+                    </div>
+                    <div class="grid-card" onclick="openLightbox('Main.jpg', 'Modern Escalators')">
+                        <img src="Main.jpg" alt="Escalators">
+                    </div>
+                    <div class="grid-card" onclick="openLightbox('LA.jpg', 'Vacant Produce Store')">
+                        <img src="Fresh.png" alt="Vacant Produce Store">
+                    </div>
+                    <div class="grid-card" onclick="openLightbox('PartyCentral.jpg', 'Party Central Arcade')">
+                        <img src="PartyCentral.jpg" alt="Arcade Counter">
+                    </div>
+                    <div class="grid-card" onclick="openLightbox('Window.png', 'Geometric Glass Skylight')">
+                        <img src="Window.png" alt="Skylight Foliage">
+                    </div>
+                    <div class="grid-card" onclick="openLightbox('Play.png', 'Vacant Indoor Play Area')">
+                        <img src="Play.png" alt="Playground Slide">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Written Content -->
+            <section class="content-panel">
+                <h2>THE VISUAL VAULT</h2>
+                <p class="subtitle">STEP INTO THE QUIET CONCOURSES.</p>
+                <hr class="neon-divider">
+
+                <p>WELCOME TO THE ECHO PLAZA VISUAL ARCHIVES. HERE, TIME STANDS STILL ACROSS HUNDREDS OF HIGH-RESOLUTION PHOTO LOGS DOCUMENTING THE LINGERING BEAUTY OF ABANDONED, DYING, AND REDEVELOPED SHOPPING CENTERS. FROM SUN-FADED STOREFRONTS AND QUIET, CAVERNOUS ANCHOR SPACES TO THE SOFT GLOW OF MUTED SKYLIGHTS REFLECTING OFF EMPTY TERRAZZO FLOORS, OUR GALLERIES CAPTURE THE SURREAL, LIMINAL CALM OF SPACES ONCE BUSTLING WITH LIFE.</p>
+
+                <p>FILTER OUR COLLECTION BY ARCHITECTURAL STYLE, DECAY LEVEL, OR DECADE OF CONSTRUCTION—WHETHER YOU ARE SEARCHING FOR 1970S CARPETED ATRIUMS, 1980S NEON-LIT CORRIDORS, OR LATE-90S GLASS-AND-PASTEL GALLERIAS. TAKE YOUR TIME, WANDER THROUGH THE EXHIBITS, AND EXPERIENCE THE QUIET SOLITUDE OF RETAIL HISTORY PRESERVED IN HIGH DEFINITION.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <a href="mailto:ECHOPLAZA@OUTLOOK.COM" class="footer-email">ECHOPLAZA@OUTLOOK.COM</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

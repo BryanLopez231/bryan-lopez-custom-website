@@ -1,4 +1,4 @@
-
+/* Base Resets & Colors */
 * {
     margin: 0;
     padding: 0;
@@ -14,36 +14,7 @@ body {
     flex-direction: column;
 }
 
-/* Header & Banner */
-header {
-    background-color: #120422;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-icon {
-    width: 60px;
-    height: 60px;
-}
-
-.site-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-    background: linear-gradient(180deg, #A259FF 0%, #FF51CD 100%);
-    
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-}
 
 /* Navigation Bar */
 nav {

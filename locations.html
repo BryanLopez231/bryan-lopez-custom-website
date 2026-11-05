@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo Plaza - Locations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+      <header class="site-header">
+   <div class="logo-container"> 
+    <img src="LOGOEP.png" alt="Echo Plaza Logo" width="350">
+</div>
+</header>
+       
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="locations.html" class="active">LOCATIONS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="split-container">
+            <!-- Left Panel: Interactive US Directory Map -->
+            <section class="locations-directory-panel">
+                <div class="directory-subhead">
+                    (To see the latest malls added or updated, <a href="gallery.html" class="inline-link">visit the Site Updates page</a>.)
+                </div>
+
+                <div class="directory-title">Select Your Destination and Click</div>
+
+                <div class="us-map-box">
+                    <svg viewBox="0 0 960 500" class="us-svg">
+                        <g fill="#A35422" stroke="#120422" stroke-width="1.5">
+                            <path d="M150 120 L220 130 L210 220 L130 200 Z" id="WA" class="state-path" onclick="selectState('WA')" />
+                            <path d="M130 200 L210 220 L190 320 L100 290 Z" id="OR" class="state-path" onclick="selectState('OR')" />
+                            <path d="M100 290 L190 320 L150 480 L70 410 Z" fill="#D49929" id="CA" class="state-path" onclick="selectState('CA')" />
+                            <path d="M220 130 L380 150 L360 250 L210 220 Z" fill="#6B8E23" class="state-path" id="MT" onclick="selectState('MT')" />
+                            <path d="M380 150 L500 160 L490 260 L360 250 Z" fill="#B22222" class="state-path" id="ND" onclick="selectState('ND')" />
+                            <path d="M210 220 L360 250 L340 360 L190 320 Z" fill="#CD5C5C" class="state-path" id="NV" onclick="selectState('NV')" />
+                            <path d="M360 250 L490 260 L480 370 L340 360 Z" fill="#D2691E" class="state-path" id="UT" onclick="selectState('UT')" />
+                            <path d="M150 480 L280 490 L260 380 L190 320 Z" fill="#CC8800" class="state-path" id="AZ" onclick="selectState('AZ')" />
+                            <path d="M280 490 L520 490 L500 370 L340 360 Z" fill="#B22222" class="state-path" id="TX" onclick="selectState('TX')" />
+                            <path d="M520 490 L750 480 L740 360 L500 370 Z" fill="#DAA520" class="state-path" id="AL" onclick="selectState('AL')" />
+                            <path d="M750 480 L900 460 L880 300 L740 360 Z" fill="#B22222" class="state-path" id="FL" onclick="selectState('FL')" />
+                            <path d="M740 360 L920 280 L880 180 L700 220 Z" fill="#8B0000" class="state-path" id="NY" onclick="selectState('NY')" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="map-instruction">
+                    Click on the map. If nothing happens, we don't have information for that state yet! Or for all listings, including in other countries, use the pull-down box.
+                    <select id="state-select" onchange="selectState(this.value)">
+                        <option value="">* Choose Location *</option>
+                        <option value="AL">Alabama</option>
+                        <option value="CA">California</option>
+                        <option value="TX">Texas</option>
+                        <option value="WA">Washington</option>
+                    </select>
+                </div>
+
+                <div class="directory-list">
+                    <h3>Mall Spaces: United States</h3>
+                    <h4 id="state-heading">Alabama</h4>
+                    <ul id="mall-ul">
+                        <li><a href="#">Century Plaza: Birmingham, AL</a></li>
+                        <li><a href="#">Eastwood Mall: Birmingham, AL &#9749;</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Right Panel: Interactive Street Map & FAQ Accordion -->
+            <section class="locations-map-panel">
+                <div class="map-container">
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-122.345%2C47.605%2C-122.330%2C47.618&layer=mapnik" class="map-iframe"></iframe>
+                </div>
+
+                <div class="faq-container">
+                    <h2 class="faq-title">frequently asked questions</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">What is Echo Plaza?</button>
+                        <div class="faq-answer">
+                            <p>Echo Plaza is a archival project and photo vault dedicated to documenting dead malls, abandoned retail architecture, and liminal commercial spaces.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Can I submit my own photos?</button>
+                        <div class="faq-answer">
+                            <p>Yes! We welcome submissions of defunct shopping centers, static fountains, and neon corridor photography. Email us at ECHOPLAZA@OUTLOOK.COM.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Are these locations accessible to the public?</button>
+                        <div class="faq-answer">
+                            <p>Some locations remain open as low-occupancy gallerias, while others are closed to the public or slated for redevelopment. Always respect local trespassing laws.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <a href="mailto:ECHOPLAZA@OUTLOOK.COM" class="footer-email">ECHOPLAZA@OUTLOOK.COM</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

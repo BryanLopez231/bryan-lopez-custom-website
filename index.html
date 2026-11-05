@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Echo Plaza - Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+    <!-- Header & Navigation Bar -->
+    <header class="site-header">
+    <div class="logo-container"> 
+    <img src="LOGOEP.png" alt="Echo Plaza Logo" width="350">
+</div>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="locations.html">LOCATIONS</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="split-container">
+            <!-- Left Panel: Slide Viewer -->
+            <section class="viewer-panel">
+                <div class="slide-frame">
+                    <img id="home-slide-img" src="Corridor.png" alt="Liminal Mall Concourse">
+                    <button id="next-slide-btn" class="arrow-btn" title="Next Exhibit Image">
+                        <span>&#8594;</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Right Panel: Written Content -->
+            <section class="content-panel">
+                <h2>WELCOME TO ECHO PLAZA</h2>
+                <p class="subtitle">A SANCTUARY FOR FORGOTTEN SPACES AND QUIET CORRIDORS.</p>
+                <hr class="neon-divider">
+
+                <p>THERE IS A DISTINCT, HYPNOTIC MYSTERY TO A PLACE BUILT FOR THOUSANDS THAT NOW HOLDS NO ONE. ECHO PLAZA EXPLORES THE PHENOMENON OF DEAD MALLS THROUGH A LENS OF LIMINAL SPACE, QUIET DECAY, AND HAUNTOLOGICAL MEMORY. IT IS A PLACE WHERE LATE-NIGHT AMBIENCE MEETS HISTORICAL DOCUMENTATION.</p>
+
+                <p>WALK THROUGH OUR CURATED EXHIBITS CAPTURING THE EERIE BEAUTY OF VACANT STOREFRONTS, STATIC FOUNTAINS, AND DARK CORRIDORS ILLUMINATED ONLY BY SECURITY LIGHTS. BEYOND THE VISUAL PHOTOGRAPHY, ECHO PLAZA PROVIDES COMPREHENSIVE LOCATION GUIDES, OFFERING A DEEP DIVE INTO THE STORIES OF ONCE-THRIVING CENTERS THAT SLOWLY FADED OUT OF SIGHT. LEARN ABOUT CHANGING DEMOGRAPHICS, ECONOMIC SHIFTS, AND THE QUIET BEAUTY THAT REMAINS LONG AFTER THE CROWDS HAVE MOVED ON.</p>
+
+                <p>WHETHER YOU VISIT ECHO PLAZA TO STUDY THE HISTORY OF RETAIL EXTINCTION OR SIMPLY TO GET LOST IN THE MOODY SOLITUDE OF EMPTY ARCHITECTURE, WE INVITE YOU TO TAKE A SEAT BY THE DRY FOUNTAIN AND SOAK IN THE ATMOSPHERE.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="mailto:ECHOPLAZA@OUTLOOK.COM" class="footer-email">ECHOPLAZA@OUTLOOK.COM</a>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
