@@ -6,7 +6,9 @@
 }
 
 body {
-    background-color: #120422;
+     background-image: 
+        linear-gradient(to bottom, rgba(0, 48, 100, 0.35), rgba(18, 4, 34, 0.95)),
+        url('../Leaves.png'); 
     color: #00FFC2;
     font-family: 'Rajdhani', sans-serif;
     min-height: 100vh;
@@ -14,19 +16,79 @@ body {
     flex-direction: column;
 }
 
+/* Header with Gradient Background Image */
+.site-header {
+    position: relative;
+    width: 100%;
+    padding: 35px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #080112;
+}
 
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Replace 'header-bg.png' with your actual background image filename */
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 39, 94, 0.35), rgba(18, 4, 34, 0.95)),
+        url('../LA.jpg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.55; /* Adjust overall image visibility */
+    z-index: 0;
+}
+
+/* Header with Equal Top & Bottom Padding */
+.site-header {
+    position: relative;
+    width: 100%;
+    /* Equal top and bottom padding (e.g., 30px each) */
+    padding: 30px 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Fixed height constraint ensures the header box never grows */
+    height: 400px; 
+    overflow: hidden;
+    background-color: #080112;
+}
+
+.logo-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Constrains the logo container so a larger logo scales inside it */
+    max-height: 100%; 
+    padding-top: 10px;
+    padding-bottom: 100px;
+    padding-right: 90px;
+}
+
+.logo-container img {
+    /* Make the logo bigger/smaller here safely. 
+       max-height keeps it constrained within the header's fixed height. */
+    max-height: 400px; 
+    width: auto;
+    display: block;
+}
 
 /* Navigation Bar */
 nav {
-    background-color: #532B88;
-    border-top: 1px solid #7B2CBF;
+    background-color: #6e239d;
+    border-top: 1px solid #6d00cd;
     border-bottom: 1px solid #7B2CBF;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px 0;
@@ -69,12 +131,23 @@ main {
     }
 }
 
+/* Left Column Wrapper (Stacks Viewer + New Section Below Images) */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 /* Viewer & Content Panels */
-.viewer-panel, .content-panel, .gallery-grid-panel, .locations-directory-panel, .locations-map-panel {
+.viewer-panel, .content-panel, .below-viewer-panel, .gallery-grid-panel, .locations-directory-panel, .locations-map-panel {
     background-color: #080112;
     border: 1px solid #2D124D;
     border-radius: 4px;
     padding: 25px;
+}
+
+.viewer-panel {
+    flex: 1;
 }
 
 .slide-frame {
@@ -120,6 +193,27 @@ main {
     background-color: #00FFC2;
 }
 
+/* New Section Below Images */
+.below-viewer-panel h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.15rem;
+    color: #00FFC2;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.below-viewer-panel p {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: #D1C4E9;
+   
+    margin-bottom: 12px;
+}
+
+.below-viewer-panel p:last-child {
+    margin-bottom: 0;
+}
+
 /* Content Typography */
 .content-panel h2 {
     font-family: 'Orbitron', sans-serif;
@@ -132,7 +226,7 @@ main {
 .content-panel .subtitle {
     text-align: center;
     font-size: 0.95rem;
-    color: #E2D9F3;
+    color: #00f2ff;
     margin-top: 5px;
     letter-spacing: 1px;
 }
@@ -149,7 +243,7 @@ main {
     line-height: 1.6;
     margin-bottom: 20px;
     color: #D1C4E9;
-    text-transform: uppercase;
+    
 }
 
 /* Photo Gallery Grid */
@@ -308,7 +402,8 @@ main {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 15px;
-    text-transform: lowercase;
+    color: #9d00ff;
+    
 }
 
 .faq-item {
@@ -320,7 +415,7 @@ main {
     width: 100%;
     background: none;
     border: none;
-    color: #00FFC2;
+    color: #9d00ff;
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
@@ -338,7 +433,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #532B88;
+    background-color: #6e239d;
     padding: 12px;
     text-align: center;
     border-top: 1px solid #7B2CBF;
