@@ -11,12 +11,11 @@
 </head>
 <body>
 
-      <header class="site-header">
-   <div class="logo-container"> 
-    <img src="LOGOEP.png" alt="Echo Plaza Logo" width="350">
-</div>
-</header>
-       
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="LOGOEP.png" alt="Echo Plaza Logo" width="350">
+        </div>
+    </header>
 
     <nav>
         <ul>
@@ -29,26 +28,58 @@
     <main>
         <div class="split-container">
             <!-- Left Panel: Interactive US Directory Map -->
-            <section class="locations-directory-panel">
-                
-
+            <section class="locations-directory-panel bordered-section border-mint">
                 <div class="directory-title">Select Your Destination and Click</div>
 
                 <div class="us-map-box">
-                    <svg viewBox="0 0 960 500" class="us-svg">
-                        <g fill="#56DCE0" stroke="#120422" stroke-width="1.5">
-                            <path d="M150 120 L220 130 L210 220 L130 200 Z" id="WA" class="state-path" onclick="selectState('WA')" />
-                            <path d="M130 200 L210 220 L190 320 L100 290 Z" id="OR" class="state-path" onclick="selectState('OR')" />
-                            <path d="M100 290 L190 320 L150 480 L70 410 Z" fill="#00FFC2" id="CA" class="state-path" onclick="selectState('CA')" />
-                            <path d="M220 130 L380 150 L360 250 L210 220 Z" fill="#c219ff" class="state-path" id="MT" onclick="selectState('MT')" />
-                            <path d="M380 150 L500 160 L490 260 L360 250 Z" fill="#00FFC2" class="state-path" id="ND" onclick="selectState('ND')" />
-                            <path d="M210 220 L360 250 L340 360 L190 320 Z" fill="#56DCE0" class="state-path" id="NV" onclick="selectState('NV')" />
-                            <path d="M360 250 L490 260 L480 370 L340 360 Z" fill="#00FFC2" class="state-path" id="UT" onclick="selectState('UT')" />
-                            <path d="M150 480 L280 490 L260 380 L190 320 Z" fill="#c219ff" class="state-path" id="AZ" onclick="selectState('AZ')" />
-                            <path d="M280 490 L520 490 L500 370 L340 360 Z" fill="#00FFC2" class="state-path" id="TX" onclick="selectState('TX')" />
-                            <path d="M520 490 L750 480 L740 360 L500 370 Z" fill="#56DCE0" class="state-path" id="AL" onclick="selectState('AL')" />
-                            <path d="M750 480 L900 460 L880 300 L740 360 Z" fill="#00FFC2" class="state-path" id="FL" onclick="selectState('FL')" />
-                            <path d="M740 360 L920 280 L880 180 L700 220 Z" fill="#c219ff" class="state-path" id="NY" onclick="selectState('NY')" />
+                    <svg viewBox="0 0 960 560" class="us-svg" role="img" aria-label="Map of the United States">
+                        <!-- Contiguous United States Outline -->
+                        <path
+                            class="us-country-outline"
+                            d="M 118 82 L 245 102 L 385 118 L 535 125 L 670 128 L 760 112 L 828 92 L 875 118 L 892 152 L 855 182 L 878 212 L 842 246 L 802 272 L 772 318 L 792 368 L 832 425 L 818 485 L 782 512 L 758 468 L 728 422 L 675 415 L 625 432 L 578 448 L 542 492 L 502 518 L 458 482 L 412 452 L 355 432 L 298 418 L 245 415 L 198 428 L 165 405 L 145 352 L 112 292 L 82 225 L 98 152 Z"
+                            fill="#16062c"
+                            stroke="#56DCE0"
+                            stroke-width="2"
+                        />
+
+                        <!-- Interactive State Regions inside the US Map -->
+                        <g stroke="#120422" stroke-width="1.5">
+                            <path d="M 122 86 L 238 104 L 226 178 L 106 158 Z" fill="#56DCE0" id="WA" class="state-path" onclick="selectState('WA')">
+                                <title>Washington</title>
+                            </path>
+                            <path d="M 106 158 L 226 178 L 208 266 L 88 228 Z" fill="#56DCE0" id="OR" class="state-path" onclick="selectState('OR')">
+                                <title>Oregon</title>
+                            </path>
+                            <path d="M 88 228 L 208 266 L 248 395 L 196 418 L 152 362 L 115 292 Z" fill="#00FFC2" id="CA" class="state-path" onclick="selectState('CA')">
+                                <title>California</title>
+                            </path>
+                            <path d="M 238 104 L 415 122 L 402 212 L 226 178 Z" fill="#c219ff" id="MT" class="state-path" onclick="selectState('MT')">
+                                <title>Montana</title>
+                            </path>
+                            <path d="M 226 178 L 402 212 L 378 332 L 208 266 Z" fill="#56DCE0" id="NV" class="state-path" onclick="selectState('NV')">
+                                <title>Nevada</title>
+                            </path>
+                            <path d="M 415 122 L 555 128 L 548 218 L 402 212 Z" fill="#00FFC2" id="ND" class="state-path" onclick="selectState('ND')">
+                                <title>North Dakota</title>
+                            </path>
+                            <path d="M 402 212 L 548 218 L 538 338 L 378 332 Z" fill="#00FFC2" id="UT" class="state-path" onclick="selectState('UT')">
+                                <title>Utah</title>
+                            </path>
+                            <path d="M 208 266 L 378 332 L 352 426 L 248 395 Z" fill="#c219ff" id="AZ" class="state-path" onclick="selectState('AZ')">
+                                <title>Arizona</title>
+                            </path>
+                            <path d="M 378 332 L 538 338 L 568 442 L 502 508 L 442 465 L 352 426 Z" fill="#00FFC2" id="TX" class="state-path" onclick="selectState('TX')">
+                                <title>Texas</title>
+                            </path>
+                            <path d="M 555 128 L 710 132 L 705 335 L 538 338 Z" fill="#56DCE0" id="AL" class="state-path" onclick="selectState('AL')">
+                                <title>Alabama Region</title>
+                            </path>
+                            <path d="M 705 335 L 775 332 L 826 482 L 784 506 L 742 412 L 705 385 Z" fill="#00FFC2" id="FL" class="state-path" onclick="selectState('FL')">
+                                <title>Florida</title>
+                            </path>
+                            <path d="M 710 132 L 865 112 L 882 162 L 825 235 L 710 230 Z" fill="#c219ff" id="NY" class="state-path" onclick="selectState('NY')">
+                                <title>New York Region</title>
+                            </path>
                         </g>
                     </svg>
                 </div>
@@ -74,14 +105,21 @@
                 </div>
             </section>
 
-            <!-- Right Panel: Interactive Street Map & FAQ Accordion -->
-            <section class="locations-map-panel">
-                <div class="map-container">
-                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-122.345%2C47.605%2C-122.330%2C47.618&layer=mapnik" class="map-iframe"></iframe>
-                </div>
+            <!-- Right Column: Street Map + Location Info Below -->
+            <div class="right-column">
+                <section class="locations-map-panel bordered-section border-pink">
+                    <div class="map-container">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-122.345%2C47.605%2C-122.330%2C47.618&layer=mapnik" class="map-iframe"></iframe>
+                    </div>
+                </section>
 
-               
-            </section>
+                <section class="location-info-panel bordered-section border-cyan">
+                    <h3>ABOUT THIS DIRECTORY</h3>
+                    <hr class="neon-divider">
+                    <p>Use the interactive United States map or dropdown selector on the left to browse documented shopping centers by state and city. Each listing highlights notable retail landmarks, architectural eras, and current occupancy status.</p>
+                    <p>The street map above frames surrounding neighborhoods and transit corridors so researchers can study how suburban growth, highway shifts, and local redevelopment shaped each site over time.</p>
+                </section>
+            </div>
         </div>
     </main>
 

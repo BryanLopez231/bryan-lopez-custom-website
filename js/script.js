@@ -1,4 +1,4 @@
-// Image Pool for Slideshow & Interaction
+// Image Pool for Home Hero Slideshow
 const galleryImages = [
     { src: 'Corridor.png', title: 'Corridor Security Glow' },
     { src: 'Main.jpg', title: 'Mitsurin Studio Wing' },
@@ -6,7 +6,6 @@ const galleryImages = [
     { src: 'Play.png', title: 'Vacant Play Area' },
     { src: 'Window.png', title: 'Geometric Skylight Foliage' },
     { src: 'Fresh.png', title: 'Vacant Produce Store' },
-    { src: 'Main.jpg', title: 'Modern Escalator Wing' },
     { src: 'Vending.jpg', title: 'Kiddie Castle Vending' },
     { src: 'PartyCentral.jpg', title: 'Party Central Arcade' },
     { src: 'Empty.jpg', title: 'Pink Concourse' }
@@ -14,19 +13,19 @@ const galleryImages = [
 
 let currentSlideIdx = 0;
 
-// 1. Home Page Slide Switcher
+// 1. Automatic Home Page Hero Slideshow (No Arrow Button)
 const slideImg = document.getElementById('home-slide-img');
-const nextBtn = document.getElementById('next-slide-btn');
 
-if (nextBtn && slideImg) {
-    nextBtn.addEventListener('click', () => {
+if (slideImg) {
+    setInterval(() => {
         currentSlideIdx = (currentSlideIdx + 1) % galleryImages.length;
-        slideImg.style.opacity = '0.4';
+        slideImg.style.opacity = '0.35';
         setTimeout(() => {
             slideImg.src = galleryImages[currentSlideIdx].src;
+            slideImg.alt = galleryImages[currentSlideIdx].title;
             slideImg.style.opacity = '1';
-        }, 150);
-    });
+        }, 250);
+    }, 4500);
 }
 
 // 2. Gallery Lightbox Modal
@@ -108,16 +107,14 @@ function selectState(stateCode) {
 // 4. FAQ Accordion Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const questions = document.querySelectorAll('.faq-question');
-    
+
     questions.forEach(q => {
         q.addEventListener('click', () => {
             const answer = q.nextElementSibling;
             const isOpen = answer.style.display === 'block';
-            
-            // Close all other answers
+
             document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-            
-            // Toggle clicked answer
+
             answer.style.display = isOpen ? 'none' : 'block';
         });
     });

@@ -12,11 +12,11 @@
 <body>
 
     <header class="site-header">
-        <div class="logo-container"> 
+        <div class="logo-container">
             <img src="LOGOEP.png" alt="Echo Plaza Logo" width="350">
         </div>
     </header>
-          
+
     <nav>
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -27,8 +27,8 @@
 
     <main>
         <div class="split-container">
-            <!-- Left Panel: 6-Photo Grid Layout -->
-            <section class="gallery-grid-panel">
+            <!-- Left Panel: 9-Photo Grid Layout (3 Columns x 3 Rows) -->
+            <section class="gallery-grid-panel bordered-section border-mint">
                 <div class="photo-grid">
                     <div class="grid-card" onclick="openLightbox('Atrium.jpg', 'Sunlit Atrium Skylight')">
                         <img src="Atrium.jpg" alt="Atrium Skylight">
@@ -48,31 +48,50 @@
                     <div class="grid-card" onclick="openLightbox('Play.png', 'Vacant Indoor Play Area')">
                         <img src="Play.png" alt="Playground Slide">
                     </div>
+                    <div class="grid-card" onclick="openLightbox('Corridor.png', 'Corridor Security Glow')">
+                        <img src="Corridor.png" alt="Corridor Security Glow">
+                    </div>
+                    <div class="grid-card" onclick="openLightbox('Vending.jpg', 'Kiddie Castle Vending')">
+                        <img src="Vending.jpg" alt="Kiddie Castle Vending">
+                    </div>
+                    <div class="grid-card" onclick="openLightbox('Empty.jpg', 'Pink Concourse')">
+                        <img src="Empty.jpg" alt="Pink Concourse">
+                    </div>
                 </div>
             </section>
 
-            <!-- Right Panel: Written Content + Video -->
-            <section class="content-panel">
-                <h2>THE VISUAL VAULT</h2>
-                <p class="subtitle">STEP INTO THE QUIET CONCOURSES.</p>
-                <hr class="neon-divider">
+            <!-- Right Column: Text Section + Separate Video Section Below -->
+            <div class="right-column">
+                <section class="content-panel bordered-section border-pink">
+                    <h2>THE VISUAL VAULT</h2>
+                    <p class="subtitle">STEP INTO THE QUIET CONCOURSES.</p>
+                    <hr class="neon-divider">
 
-                <p>Welcome to the Echo Plaza visual archives. Here, time stands still across hundreds of high-resolution photo logs documenting the lingering beauty of abandoned, dying, and redeveloped shopping centers. From sun-faded storefronts and quiet, cavernous anchor spaces to the soft glow of muted skylights reflecting off empty terrazzo floors, our galleries capture the surreal, liminal calm of spaces once bustling with life.</p>
+                    <p>Welcome to the Echo Plaza visual archives. Here, time stands still across hundreds of high-resolution photo logs documenting the lingering beauty of abandoned, dying, and redeveloped shopping centers. From sun-faded storefronts and quiet, cavernous anchor spaces to the soft glow of muted skylights reflecting off empty terrazzo floors, our galleries capture the surreal, liminal calm of spaces once bustling with life.</p>
 
-                <p>Filter our collection by architectural style, decay level, or decade of construction—whether you are searching for 1970s carpeted atriums, 1980s neon-lit corridors, or late-90s glass-and-pastel gallerias. Take your time, wander through the exhibits, and experience the quiet solitude of retail history preserved in high definition.</p>
+                    <p>Filter our collection by architectural style, decay level, or decade of construction—whether you are searching for 1970s carpeted atriums, 1980s neon-lit corridors, or late-90s glass-and-pastel gallerias. Take your time, wander through the exhibits, and experience the quiet solitude of retail history preserved in high definition.</p>
+                </section>
 
-                <!-- Responsive YouTube Video Embed -->
-                <div class="video-wrapper">
-                    <iframe 
-                        src="https://www.youtube.com/embed/MfsmHFQHGoM?si=nKtELijMJpqJPqki" 
-                        title="Echo Plaza Archive Video" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </section>
+                <section class="video-section bordered-section border-cyan">
+                    <h3>ARCHIVE FEATURE REEL</h3>
+                    <hr class="neon-divider">
+
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/MfsmHFQHGoM?rel=0"
+                            title="Echo Plaza Archive Video"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <p class="video-description">
+                        This video feature explores quiet corridors, faded storefronts, and the lingering atmosphere inside struggling or abandoned retail spaces—pairing visual walkthrough footage with reflections on suburban mall history.
+                    </p>
+                </section>
+            </div>
         </div>
     </main>
 
