@@ -159,8 +159,8 @@ main {
     background: linear-gradient(
         to top,
         rgba(8, 1, 18, 0.92) 0%,
-        rgba(18, 4, 34, 0.72) 55%,
-        rgba(8, 1, 18, 0.38) 100%
+        rgba(18, 4, 34, 0.72) 1%,
+        rgba(8, 1, 18, 0.38) 5%
     );
     display: flex;
     align-items: flex-end;
